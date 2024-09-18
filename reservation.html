@@ -317,6 +317,19 @@
 	
 	<a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
 
+	<!-- send message -->
+	<script>
+		function sendMessage() {
+			const name = document.getElementById("name").value;
+			const email = document.getElementById("email").value;
+			const alamat = document.getElementById("alamat").value;
+			const pesan = document.getElementById("pesan").value;
+
+			const link = "https://api.whatsapp.com/send?phone=6283898789426&text=Halo%20Admin%2C%0ASaya%20*" + name + "*%0AEmail%20Saya%20*" + email + "*%0AAlamat%20Saya%20*" + alamat + "*%0A%0ASaya%20ingin%20memesan%2C%0A*" + pesan + "*";
+
+			window.open(link);
+		}
+	</script>
 	<!-- ALL JS FILES -->
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script src="js/popper.min.js"></script>
@@ -334,18 +347,5 @@
     <script src="js/contact-form-script.js"></script>
     <script src="js/custom.js"></script>
 
-	<!-- send message -->
-	<script>
-		function sendMessage() {
-			const name = document.getElementById("name").value;
-			const email = document.getElementById("email").value;
-			const alamat = document.getElementById("alamat").value;
-			const pesan = document.getElementById("pesan").value;
-
-			const url ="https://api.whatsapp.com/send?phone=6283898789426&text=Halo%20Admin%2C%0ASaya%20* + "name" + *%0AEmail%20Saya%20* + "email" + *%0AAlamat%20Saya%20* + "alamat" + *%0A%0ASaya%20ingin%20memesan%2C%0A* + "pesan" + *";
-
-			window.open(url);
-		}
-	</script>
 </body>
 </html>
